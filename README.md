@@ -1,0 +1,1 @@
+This will be a log of my progress into Web Development.
