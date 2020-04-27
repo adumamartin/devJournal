@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>100 Days of Code Day 4</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        background-color: #1E2028;
+        font-family: "Lucida Console", Monaco, monospace;
+    }
+
+    .topNav {
+        background-color: black;
+        overflow: hidden;
+    }
+
+    .topNav a {
+        color: #3A66F5;
+        float: left;
+        text-align: center;
+        padding: 13px 15px;
+    }
+
+    .topNav a {
+        color: #3A66F5;
+    }
+
+    .topNav a:hover {
+        color: white;
+    }
+
+    .topNav a.active {
+        background-color: aqua;
+
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    #headerLink {
+        color: white;
+    }
+
+    span.hashtag {
+        color: #1DA1F2;
+    }
+
+    a {
+        color: white;
+    }
+
+    a:hover {
+        background-color: #535050;
+    }
+
+    a:visited {
+        color: #3A66F5;
+    }
+
+    .entryFull {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 10px 5px;
+        padding: 4px;
+    }
+
+    .entryDate {
+        color: #BFC2CC;
+    }
+
+    .entryContent {
+        color: #80818C;
+    }
+
+    .completedTask {
+        color: green !important;
+    }
+
+    .monument {
+        color: goldenrod;
+    }
+</style>
+
+<body>
+    <div class="topNav">
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">Directory</a>
+        <a href="#">Contact</a>
+    </div>
+    <h1><a href="https://twitter.com/adumasss" id="headerLink">@adumasss</a></h1>
+    <div class="entryFull">
+        <div class="entryDate">
+            <h3>April 22</h3>
+        </div>
+        <div class="entryContent">
+            <p>
+                I've decided to participate in the <span class="hashtag">#100DaysOfCode</span> trend on <a href="https://twitter.com/"
+                    target="_blank">Twitter</a>
+                as a result of the quarantine imposed during the <a href="https://en.wikipedia.org/wiki/Coronavirus_disease_2019"
+                    target="_blank">COVID-19</a>
+                pandemic. I think I will be using this page as a reference point to when I started and to measure the
+                development of my ability.
+            </p>
+            <p>
+                I have been using lessons from <a href="https://www.freecodecamp.org/learn" target="_blank">freeCodeCamp</a>
+                and as of
+                today have completed the 'Basic HTML' and 'Basic CSS' portions. From hereon forward, I will be updating
+                future iterations of this page with new skills I learn to implement in addition to side (main?)
+                projects to practice said skills.
+                <hr>
+            </p>
+
+            <p>
+                Thinking ahead, for ease of future access and navigation I plan to either implement a task bar or
+                banner along the top or one side of the site.
+            </p>
+            <p>
+                A top banner offers several benefits:
+            </p>
+            <ul>
+                <li>
+                    Retains a sense of uniformity across different mediums (web vs mobile) as I feel side banners take
+                    up valuable horizontal space on mobile and I usually find them cumbersome.
+                </li>
+                <li>
+                    Allows a quick cursory glance at the page and contains everthing a visitor would need to quickly
+                    navigate elsewhere.
+                </li>
+            </ul>
+            <p>
+                As I currently envision this project to be a progress journal of sorts, I feel a side banner as a type
+                of table of contents can be where other iterations of the page are linked. I could even include links
+                to other projects all in one general area for better QoL for myself/visitors.
+            </p>
+        </div>
+    </div>
+    <div class="entryFull">
+        <div class="entryDate">
+            <h3 id="april23">April 23</h3>
+        </div>
+        <div class="entryContent">
+            <p>
+                I had a late start to coding today because of other committments. I am halfway through the 'Applied
+                Visual Design' portion and I plan to apply some of the concepts in that section to my existing divs.
+            </p>
+            <p>
+                Because of who I am as a person I ended up doing nothing today.
+            </p>
+        </div>
+    </div>
+    <div class="entryFull">
+        <div class="entryDate">
+            <h3>April 24</h3>
+        </div>
+        <div class="entryContent">
+            <p>
+                League of Legends
+            </p>
+        </div>
+    </div>
+    <div class="entryFull">
+        <div class="entryDate">
+            <h3>April 25</h3>
+        </div>
+        <div class="entryContent">
+            <p>
+                League of Legends is bad.
+            </p>
+        </div>
+    </div>
+    <div class="entryFull">
+        <div class="entryDate">
+            <h3>April 26</h3>
+        </div>
+        <div class="entryContent">
+            <p>
+                Today I've decided to create a github repository and begin uploading each day's work onto github. I did
+                not originally think of uploading into github so I had to copy my original files into the location that
+                my repository was saved in locally.
+            </p>
+            <p>
+                I used solely terminal command line to clone my repository and add/commit files, but I relied on the
+                trusty copy/paste for moving the original files as was not yet sure of my ability to move files across
+                directories using command line.
+            </p>
+            <p>
+                It's a bit annoying that I have to scroll down everytime I want to see my updates on the browser so I'm
+                strongly considering shifting the format of this journal to reverse chronological order.
+            </p>
+            <p>
+                Alternatively, I could also forego this current scrolling journal format and use on in which the entire
+                page is dedicated to that day's work.
+                <ul>
+                    <li>
+                        I personally prefer the current iteration because when I eventually have enough entries, it'll
+                        be aesthetically pleasing to scroll and see the changes rather than clicking through multiple
+                        webpages.
+                    </li>
+                    <li>
+                        Instead of literally coding in reverse order, I'm hoping I will learn something that will allow
+                        the process to be automated and the entries displayed reverse chronologically behind the scenes
+                        between text editor and browser.
+                        <ul>
+                            <li>
+                                Perhaps something as simple as taking each entry as an element in an array list and
+                                then rendered in reverse order when displayed. I am not sure if this is a thing in web
+                                development.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                I am finally applying some of the features I mentioned on <a href="#april23" target="_blank">April 23rd</a>.
+            </p>
+            <p>
+                Made some QoL change to earlier links making them open in new tabs rather than redirecting within the
+                current page.
+            </p>
+            <hr>
+            <p>
+                I am thinking of implementing a to-do list of sorts to keep track of changes that I plan to enact on
+                the journal.
+                <ul>
+                    <li>
+                        Items will be colored red to signify a feature in progress and green for a completed feature.
+                    </li>
+                    <li>
+                        Items will contain a link that can guide the visitor to its completion date to see the
+                        progress.
+                    </li>
+                    <li class="monument">
+                        This section in particular will be tentatively colored yellow, to highlight that it was a
+                        major change -- until I can think of another method to display such, otherwise.
+                    </li>
+                </ul>
+                <a href="#toDoListInit" id="toDoListInit" class="completedTask" class="recursion">To Do List</a>
+            </p>
+            <hr>
+            <p class="monument">
+                Just as I was reviewing today's work I realized I skipped a day, likely due to League induced
+                time/reality disassociation. Today is actually Day 5, not Day 4 like the html title and file name would
+                have you suggest.
+            </p>
+            <p class="monument">
+                Instead of making changes that reflect the corrected date and such on this iteration, I've decided not
+                to as documentation of my mistake.
+            </p>
+            <p class="monument">
+                The accurate real-time notation will be used in tomorrow's iteration along with a corresponding
+                disclosure.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+<div class="entryFull">
+    <div class="entryDate">
+        <h3> </h3>
+    </div>
+    <div class="entryContent">
+        <p>
+
+        </p>
+    </div>
+</div>
