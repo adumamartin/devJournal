@@ -12,31 +12,6 @@
         font-family: "Lucida Console", Monaco, monospace;
     }
 
-    /* .topNav {
-        background-color: black;
-        overflow: hidden;
-        position: fixed;
-        top: 0px;
-        width: 100%;
-    }
-    .topNav a {
-        color: #3A66F5;
-        float: left;
-        display: block;
-        text-align: center;
-        padding: 13px 15px;
-    }
-    #topNavLeft {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-    }
-    #topNavRight {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-    } */
-
     .topNav {
         background-color: black;
         overflow: hidden;
@@ -46,19 +21,18 @@
         width: 100%;
     }
 
-    .topNav a {
+    .topNavLeft {
         color: #3A66F5;
         float: left;
         text-align: center;
         padding: 13px 15px;
     }
 
-    .topNav a {
+    .topNavRight {
         color: #3A66F5;
-    }
-
-    .topNav a:hover {
-        color: white;
+        float: right;
+        text-align: center;
+        padding: 13px 15px;
     }
 
     h1 {
@@ -115,19 +89,17 @@
 
 <body>
     <div class="topNav">
-        <!-- <div id="topNavLeft">
-                <a href="#">Home</a>
-                <a href="#">Projects</a>
-                <a href="#">Directory</a>
-                <a href="#">Contact</a>
+        <div class="topNavLeft">
+            <a href="#">Home</a>
+            <a href="#">Projects</a>
+            <a href="#">Directory</a>
+            <a href="#">Contact</a>
         </div>
-        <div id="topNavRight">
-                <a href="#">Socials</a>
-        </div> -->
-        <a href="#">Home</a>
-        <a href="#">Projects</a>
-        <a href="#">Directory</a>
-        <a href="#">Contact</a>
+        <div class="topNavRight">
+            <a href="https://github.com/adumamartin/" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/martinaduma/" target="_blank">LinkedIn</a>
+            <a href="https://twitter.com/adumasss" target="_blank">Twitter</a>
+        </div>
     </div>
     <h1>
         <a href="https://twitter.com/adumasss" id="headerLink">@adumasss</a>
@@ -323,7 +295,12 @@
                     Minor change, but I commented out the entry template that was previously on the bottom.
                 </li>
                 <li>
-                    The top navigation bar is now fixed in place and can be accessed at all times when scrolling. In making this change, I also added a margin to the page so the content doesn't hug the borders and to prevent overlapping with the navigation bar.
+                    The top navigation bar is now fixed in place and can be accessed at all times when scrolling. In
+                    making this change, I also added a margin to the page so the content doesn't hug the borders and to
+                    prevent overlapping with the navigation bar.
+                </li>
+                <li>
+                    Separated the navigation bar into two sections, the general left portion and the right portion with my socials.
                 </li>
             </ul>
             <p class="monument">
