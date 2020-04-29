@@ -8,6 +8,7 @@
 <style>
     body {
         margin-top: 50px;
+        margin-left: 100px;
         background-color: #1E2028;
         font-family: "Lucida Console", Monaco, monospace;
     }
@@ -33,6 +34,7 @@
         color: #3A66F5;
         text-align: center;
         padding: 13px 15px;
+        text-decoration: none;
     }
 
     .topNav li a:hover:not(.active) {
@@ -41,6 +43,26 @@
 
     .active {
         background-color: white;
+    }
+
+    .sideNav {
+        list-style-type: none;
+        width: 100px;
+        height: 100%;
+        position: fixed;
+        top: 47px;
+        left: 0px;
+        background: #111111;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sideNav li a {
+        display: block;
+        color: white;
+        padding: 13px 5px;
+        text-decoration: none;
     }
 
     h1 {
@@ -93,6 +115,10 @@
     .monument {
         color: goldenrod;
     }
+
+    .inPageAnchor {
+        padding-top: 50px;
+    }
 </style>
 
 <body>
@@ -117,6 +143,44 @@
         </li>
         <li style="float:right">
             <a href="https://twitter.com/adumasss" target="_blank">Twitter</a>
+        </li>
+    </ul>
+    <ul class="sideNav">
+        <li>
+            <a>Day 1</a>
+        </li>
+        <li>
+            <a>Day 2</a>
+        </li>
+        <li>
+            <a>Day 3</a>
+        </li>
+        <li>
+            <a>Day 4</a>
+        </li>
+        <li>
+            <a>Day 5</a>
+        </li>
+        <li>
+            <a>Day 6</a>
+        </li>
+        <li>
+            <a>Day 7</a>
+        </li>
+        <li>
+            <a href="#toDoListInit" class="inPageAnchor">To Do List</a>
+        </li>
+        <li>
+            <a href="#directoryInit" class="inPageAnchor">Sidebar Directory</a>
+        </li>
+        <li>
+            <a href="#homePageInit" class="inPageAnchor">Home Page</a>
+        </li>
+        <li>
+            <a href="#projectsPageInit" class="inPageAnchor">Projects Page</a>
+        </li>
+        <li>
+            <a href="#contactPageInit" class="inPageAnchor">Contact Page</a>
         </li>
     </ul>
     <h1>
@@ -253,7 +317,7 @@
             </p>
             <hr>
             <h4>
-                <a href="#toDoListInit" id="toDoListInit" class="completedTask" class="recursion" class="task">To Do
+                <a href="#toDoListInit" id="toDoListInit" class="completedTask inPageAnchor recursion">To Do
                     List</a>
             </h4>
 
@@ -312,7 +376,7 @@
                 <li>
                     Minor change, but I commented out the entry template that was previously on the bottom.
                 </li>
-                <li>
+                <li class="monument">
                     The top navigation bar is now fixed in place and can be accessed at all times when scrolling. In
                     making this change, I also added a margin to the page so the content doesn't hug the borders and to
                     prevent overlapping with the navigation bar.
@@ -341,7 +405,7 @@
                 </li>
             </ul>
             <h4 class="inProgressTask">
-                <a href="#directoryInit" id="directoryInit" class="inProgressTask" class="task">
+                <a href="#directoryInit" id="directoryInit" class="inProgressTask inPageAnchor">
                     Sidebar Directory
                 </a>
             </h4>
@@ -349,6 +413,11 @@
                 <li>
                     Now that the journal has a sizable length that allows scrolling, I'm thinking of implementing a
                     sidebar directory which links to each day for easy navigation.
+                </li>
+                <li>
+                    There will also be links items on the to do list. The link destination will then contain the first
+                    instance where the item was initialized and contains the explanantion behind the creation of the
+                    item. Further clicking on the item will lead to the date when the item was completed.
                 </li>
             </ul>
             <p class="monument">
@@ -363,22 +432,22 @@
                 </ul>
             </p>
             <h4 class="inProgressTask">
-                <a href="#homePageInit" id="homePageInit" class="inProgressTask" class="task">
+                <a href="#homePageInit" id="homePageInit" class="inProgressTask inPageAnchor">
                     Home Page
                 </a>
             </h4>
             <h4 class="inProgressTask">
-                <a href="#projectsPageInit" id="projectsPageInit" class="inProgressTask" class="task">
+                <a href="#projectsPageInit" id="projectsPageInit" class="inProgressTask inPageAnchor">
                     Projects Page
                 </a>
             </h4>
             <h4 class="inProgressTask">
-                <a href="#top" id="journalPageInit" class="completedTask" class="task">
+                <a href="#top" id="journalPageInit" class="completedTask inPageAnchor">
                     Journal Page
                 </a>
             </h4>
             <h4 class="inProgressTask">
-                <a href="#contactPageInit" id="contactPageInit" class="inProgressTask" class="task">
+                <a href="#contactPageInit" id="contactPageInit" class="inProgressTask inPageAnchor">
                     Contact Page
                 </a>
             </h4>
@@ -391,11 +460,47 @@
         <div class="entryContent">
             <ul>
                 <li>
-                    Changed the code of the navigation bar to allow an easier implementation of an active property. This change should also make it easier to add icons later.
+                    Changed the code of the navigation bar to allow an easier implementation of an active property.
+                    This change should also make it easier to add icons later.
+                </li>
+                <li>
+                    I have removed the task class from existing to do list items as I will be using it in the creation
+                    for the Sidebar Directory.
+                </li>
+                <li>
+                    <a href="#directoryInit" class="completedTask inPageAnchor">
+                        Created the Sidebar Directory.
+                    </a>
+                    <ul>
+                        <li>
+                            Items in the sidebar are in-page links to specific sections of the journal.
+                        </li>
+                    </ul>
+                </li>
+                <li class="monument">
+                    Fixed problem in which in-page anchor links were being overlayed by the fixed border. Solution: applying padding on top of each in
+                    page anchor.
                 </li>
             </ul>
             <p>
-                Make navigation bar active property.
+                I considered creating the Home, Projects, and Contact pages today, but I'm going to save them for when
+                I have new features I want to try to implement.
+                <ul>
+                    <li>
+                        Doing so would allow me to refresh how to build a page from the ground up and at least 3 more
+                        chances to help me be more familiar with the process.
+                    </li>
+                    <li>
+                        I am also thinking of using one giant page with the current extra pages as sections of the
+                        page, instead.
+                        <ul>
+                            <li>
+                                I'm rather fond of the active property and I'm not sure how compatible it will be with a one-page design.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
             </p>
         </div>
 </body>
