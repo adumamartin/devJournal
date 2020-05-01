@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>100 Days of Code Day 9</title>
+</head>
+<style>
+    body {
+        margin-top: 50px;
+        margin-left: 100px;
+        background-color: #1E2028;
+        font-family: "Lucida Console", Monaco, monospace;
+    }
+
+    .topNav {
+        list-style-type: none;
+        background-color: black;
+        overflow: hidden;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .topNav li {
+        float: left;
+    }
+
+    .topNav li a {
+        display: block;
+        color: #3A66F5;
+        text-align: center;
+        padding: 13px 15px;
+        text-decoration: none;
+    }
+
+    .topNav li a:hover:not(.active) {
+        background-color: #535050;
+    }
+
+    .active {
+        background-color: white;
+    }
+
+    .sideNav {
+        list-style-type: none;
+        width: 100px;
+        height: 100%;
+        position: fixed;
+        top: 47px;
+        left: 0px;
+        background: #111111;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sideNav li a {
+        display: block;
+        color: white;
+        padding: 13px 5px;
+        text-decoration: none;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    #headerLink {
+        color: white;
+    }
+
+    span.hashtag {
+        color: #1DA1F2;
+    }
+
+    a {
+        color: white;
+    }
+
+    a:hover {
+        background-color: #535050;
+    }
+
+    a:visited {
+        color: #3A66F5;
+    }
+
+    .entryFull {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 10px 5px;
+        padding: 4px;
+    }
+
+    .entryDate {
+        color: #BFC2CC;
+    }
+
+    .entryContent {
+        color: #80818C;
+    }
+
+    .inProgressTask {
+        color: red !important;
+    }
+
+    .completedTask {
+        color: green !important;
+    }
+
+    .monument {
+        color: goldenrod;
+    }
+
+    .inPageAnchor {
+        padding-top: 50px;
+    }
+
+    footer {
+        color: #3A66F5;
+        text-align: center;
+        position: relative;
+        bottom: 0px;
+    }
+</style>
+
+<body>
+    <nav>
+        <ul class="topNav">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Projects</a>
+            </li>
+            <li>
+                <a href="#" class="active">Journal</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+            <li style="float:right">
+                <a href="https://github.com/adumamartin/" target="_blank">Github</a>
+            </li>
+            <li style="float:right">
+                <a href="https://www.linkedin.com/in/martinaduma/" target="_blank">LinkedIn</a>
+            </li>
+            <li style="float:right">
+                <a href="https://twitter.com/adumasss" target="_blank">Twitter</a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="sideNav">
+        <li>
+            <a>Day 1</a>
+        </li>
+        <li>
+            <a>Day 2</a>
+        </li>
+        <li>
+            <a>Day 3</a>
+        </li>
+        <li>
+            <a>Day 4</a>
+        </li>
+        <li>
+            <a>Day 5</a>
+        </li>
+        <li>
+            <a>Day 6</a>
+        </li>
+        <li>
+            <a>Day 7</a>
+        </li>
+        <li>
+            <a href="#toDoListInit" class="inPageAnchor">To Do List</a>
+        </li>
+        <li>
+            <a href="#directoryInit" class="inPageAnchor">Sidebar Directory</a>
+        </li>
+        <li>
+            <a href="#homePageInit" class="inPageAnchor">Home Page</a>
+        </li>
+        <li>
+            <a href="#projectsPageInit" class="inPageAnchor">Projects Page</a>
+        </li>
+        <li>
+            <a href="#contactPageInit" class="inPageAnchor">Contact Page</a>
+        </li>
+    </ul>
+    <h1>
+        <a href="https://twitter.com/adumasss" id="headerLink">@adumasss</a>
+    </h1>
+    <div class="entryFull">
+        <div class="entryDate">
+            <h3>April 22</h3>
+        </div>
+        <div class="entryContent">
+            <p>
+                I've decided to participate in the <span class="hashtag">#100DaysOfCode</span> trend on <a href="https://twitter.com/"
+                    target="_blank">Twitter</a>
+                as a result of the quarantine imposed during the <a href="https://en.wikipedia.org/wiki/Coronavirus_disease_2019"
+                    target="_blank">COVID-19</a>
+                pandemic. I think I will be using this page as a reference point to when I started and to measure the
+                development of my ability.
+            </p>
+            <p>
+                I have been using lessons from <a href="https://www.freecodecamp.org/learn" target="_blank">freeCodeCamp</a>
+                and as of
+                today have completed the 'Basic HTML' and 'Basic CSS' portions. From hereon forward, I will be updating
+                future iterations of this page with new skills I learn to implement in addition to side (main?)
+                projects to practice said skills.
+            </p>
+            <hr>
+            <p>
+                Thinking ahead, for ease of future access and navigation I plan to either implement a task bar or
+                banner along the top or one side of the site.
+            </p>
+            <p>
+                A top banner offers several benefits:
+            </p>
+            <ul>
+                <li>
+                    Retains a sense of uniformity across different mediums (web vs mobile) as I feel side banners take
+                    up valuable horizontal space on mobile and I usually find them cumbersome.
+                </li>
+                <li>
+                    Allows a quick cursory glance at the page and contains everthing a visitor would need to quickly
+                    navigate elsewhere.
+                </li>
+            </ul>
+            <p>
+                As I currently envision this project to be a progress journal of sorts, I feel a side banner as a type
+                of table of contents can be where other iterations of the page are linked. I could even include links
+                to other projects all in one general area for better QoL for myself/visitors.
+            </p>
+        </div>
+    </div>
+    <div class="entryFull">
+        <div class="entryDate">
+            <h3 id="april23">April 23</h3>
+        </div>
+        <div class="entryContent">
+            <p>
+                I had a late start to coding today because of other committments. I am halfway through the 'Applied
+                Visual Design' portion and I plan to apply some of the concepts in that section to my existing divs.
+            </p>
+            <p>
+                Because of who I am as a person I ended up doing nothing today.
+            </p>
+        </div>
+    </div>
+    <div class="entryFull">
+        <div class="entryDate">
+            <h3>April 24</h3>
+        </div>
+        <div class="entryContent">
+            <p>
+                League of Legends
+            </p>
+        </div>
+    </div>
+    <div class="entryFull">
+        <div class="entryDate">
+            <h3>April 25</h3>
+        </div>
+        <div class="entryContent">
+            <p>
+                League of Legends is bad.
+            </p>
+        </div>
+    </div>
+    <div class="entryFull">
+        <div class="entryDate">
+            <h3>April 26</h3>
+        </div>
+        <div class="entryContent">
+            <p>
+                Today I've decided to create a github repository and begin uploading each day's work onto github. I did
+                not originally think of uploading into github so I had to copy my original files into the location that
+                my repository was saved in locally.
+            </p>
+            <p>
+                I used solely terminal command line to clone my repository and add/commit files, but I relied on the
+                trusty copy/paste for moving the original files as was not yet sure of my ability to move files across
+                directories using command line.
+            </p>
+            <p>
+                It's a bit annoying that I have to scroll down everytime I want to see my updates on the browser so I'm
+                strongly considering shifting the format of this journal to reverse chronological order.
+            </p>
+            <p>
+                Alternatively, I could also forego this current scrolling journal format and use on in which the entire
+                page is dedicated to that day's work.
+            </p>
+            <ul>
+                <li>
+                    I personally prefer the current iteration because when I eventually have enough entries, it'll
+                    be aesthetically pleasing to scroll and see the changes rather than clicking through multiple
+                    webpages.
+                </li>
+                <li>
+                    Instead of literally coding in reverse order, I'm hoping I will learn something that will allow
+                    the process to be automated and the entries displayed reverse chronologically behind the scenes
+                    between text editor and browser.
+                    <ul>
+                        <li>
+                            Perhaps something as simple as taking each entry as an element in an array list and
+                            then rendered in reverse order when displayed. I am not sure if this is a thing in web
+                            development.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p>
+                I am finally applying some of the features I mentioned on <a href="#april23" target="_blank">April 23rd</a>.
+            </p>
+            <p>
+                Made some QoL change to earlier links making them open in new tabs rather than redirecting within the
+                current page.
+            </p>
+            <hr>
+            <h4>
+                <a href="#toDoListInit" id="toDoListInit" class="completedTask inPageAnchor recursion">To Do
+                    List</a>
+            </h4>
+
+            <ul>
+                <li>
+                    I am thinking of implementing a to-do list of sorts to keep track of changes that I plan to enact
+                    on
+                    the journal.
+                </li>
+                <li>
+                    Items will be colored red to signify a feature in progress and green for a completed feature.
+                </li>
+                <li>
+                    Items will contain a link that can guide the visitor to its completion date to see the
+                    progress or from the completed item to see what spurred the feature into existance.
+                </li>
+                <li class="monument">
+                    This section in particular will be tentatively colored yellow, to highlight that it was a
+                    major change -- until I can think of another method to display such, otherwise.
+                </li>
+            </ul>
+
+            <hr>
+            <p class="monument">
+                Just as I was reviewing today's work I realized I skipped a day, likely due to League induced
+                time/reality disassociation. Today is actually Day 5, not Day 4 like the html title and file name would
+                have you suggest.
+            </p>
+            <p class="monument">
+                Instead of making changes that reflect the corrected date and such on this iteration, I've decided not
+                to as documentation of my mistake.
+            </p>
+            <p class="monument">
+                The accurate real-time notation will be used in tomorrow's iteration along with a corresponding
+                disclosure.
+            </p>
+        </div>
+    </div>
+    <div class="entryFull">
+        <div class="entryDate">
+            <h3>April 27</h3>
+        </div>
+        <div class="entryContent">
+            <ul>
+                <li>
+                    The file name as well as html title are now in coordination with real-time accuracy.
+                </li>
+                <li>
+                    I've made a few aesthetic changes to the way tasks in progress are first initialized and defined
+                    for clarity.
+                </li>
+                <li>
+                    I added a class called "tasks" on each of the items on my to do list before I took a nap and I now
+                    no longer remember why.
+                </li>
+                <li>
+                    Minor change, but I commented out the entry template that was previously on the bottom.
+                </li>
+                <li class="monument">
+                    The top navigation bar is now fixed in place and can be accessed at all times when scrolling. In
+                    making this change, I also added a margin to the page so the content doesn't hug the borders and to
+                    prevent overlapping with the navigation bar.
+                </li>
+                <li>
+                    Separated the navigation bar into two sections, the general left portion and the right portion with
+                    my socials.
+                </li>
+                <li>
+                    Renamed the 'Directory' to 'Journal'.
+                </li>
+            </ul>
+            <p class="monument">
+                I should specify on my commit that I made a clerical error on the dating for clarity on github.
+            </p>
+            <p class="monument">
+                I've decided a small format change: the daily changes to the document will be listed as an unordered
+                list following the date.
+            </p>
+            <ul>
+                <li>
+                    This will improve readability for days when there were a lot of changes.
+                </li>
+                <li>
+                    Creates a uniformity in what is expected to be seen when looking at the content of an entry.
+                </li>
+            </ul>
+            <h4 class="inProgressTask">
+                <a href="#directoryInit" id="directoryInit" class="inProgressTask inPageAnchor">
+                    Sidebar Directory
+                </a>
+            </h4>
+            <ul>
+                <li>
+                    Now that the journal has a sizable length that allows scrolling, I'm thinking of implementing a
+                    sidebar directory which links to each day for easy navigation.
+                </li>
+                <li>
+                    There will also be links items on the to do list. The link destination will then contain the first
+                    instance where the item was initialized and contains the explanantion behind the creation of the
+                    item. Further clicking on the item will lead to the date when the item was completed.
+                </li>
+            </ul>
+            <p class="monument">
+                I'm planning to make this page an exclusive journal page and begin creating respective pages accoring
+                to the items in the left side of the navigation bar.
+            </p>
+            <ul>
+                <li>
+                    I initially made this change so I can enact an anchor active property to my navigation bar, but
+                    it will also allow me to practice other web dev skills not suitable for a journal page such as
+                    forms and larger animations.
+                </li>
+            </ul>
+            <h4 class="inProgressTask">
+                <a href="#homePageInit" id="homePageInit" class="inProgressTask inPageAnchor">
+                    Home Page
+                </a>
+            </h4>
+            <h4 class="inProgressTask">
+                <a href="#projectsPageInit" id="projectsPageInit" class="inProgressTask inPageAnchor">
+                    Projects Page
+                </a>
+            </h4>
+            <h4 class="inProgressTask">
+                <a href="#top" id="journalPageInit" class="completedTask inPageAnchor">
+                    Journal Page
+                </a>
+            </h4>
+            <h4 class="inProgressTask">
+                <a href="#contactPageInit" id="contactPageInit" class="inProgressTask inPageAnchor">
+                    Contact Page
+                </a>
+            </h4>
+        </div>
+    </div>
+    <div class="entryFull">
+        <div class="entryDate">
+            <h3>April 28</h3>
+        </div>
+        <div class="entryContent">
+            <ul>
+                <li>
+                    Changed the code of the navigation bar to allow an easier implementation of an active property.
+                    This change should also make it easier to add icons later.
+                </li>
+                <li>
+                    I have removed the task class from existing to do list items as I will be using it in the creation
+                    for the Sidebar Directory.
+                </li>
+                <li>
+                    <a href="#directoryInit" class="completedTask inPageAnchor">
+                        Created the Sidebar Directory.
+                    </a>
+                    <ul>
+                        <li>
+                            Items in the sidebar are in-page links to specific sections of the journal.
+                        </li>
+                    </ul>
+                </li>
+                <li class="monument">
+                    Fixed problem in which in-page anchor links were being overlayed by the fixed border. Solution:
+                    applying padding on top of each in
+                    page anchor.
+                </li>
+            </ul>
+            <p>
+                I considered creating the Home, Projects, and Contact pages today, but I'm going to save them for when
+                I have new features I want to try to implement.
+            </p>
+            <ul>
+                <li>
+                    Doing so would allow me to refresh how to build a page from the ground up and at least 3 more
+                    chances to help me be more familiar with the process.
+                </li>
+                <li>
+                    I am also thinking of using one giant page with the current extra pages as sections of the
+                    page, instead.
+                    <ul>
+                        <li>
+                            I'm rather fond of the active property and I'm not sure how compatible it will be with
+                            a one-page design.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="entryFull">
+        <div class="entryDate">
+            <h3>April 29</h3>
+        </div>
+        <div class="entryContent">
+            <ul>
+                <li>
+                    Spent most of my time on freeCodeCamp finishing the 'Applied Visual Design' section.
+                </li>
+                <li>
+                    Interested in applying @keyframes animations on certain sections of my page.
+                </li>
+            </ul>
+            <p>
+                Going to be shifting to using a one page design.
+            </p>
+            <ul>
+                <li>
+                    Sidebar can be implemented as a drop down menu under 'Journal'.
+                </li>
+                <ul>
+                    <li>
+                        Clicking 'Journal' from the nav bar would still nagivate to the first journal entry.
+                    </li>
+                    <li>
+                        The dropdown would allow for quicker navigation within the journal section to a specific
+                        date/feature.
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <article class="entryFull">
+        <h3 class="entryDate">April 30</h3>
+        <div class="entryContent">
+            <ul>
+                <li>
+                    I have temporarily stopped updating the sidebar in anticipation of a total page redesign.
+                </li>
+                <li>
+                    Updated the main navigation bar to be nested within a nav tag.
+                </li>
+                <li>
+                    Added a copyright footer.
+                </li>
+                <li>
+                    Updated my header tags to follow the Applied Accessibility standards of hierarchical content
+                    relationships. Font discrepancies stylized with CSS.
+                </li>
+                <li>
+                    Updated divs to elements that add semantic meaning to the markup. Tags include main, header,
+                    footer, nav,
+                    article, and section.
+                </li>
+            </ul>
+            <p>
+                Tommorrow I plan to start making structural changes that will bring the aesthetic of the page closer to
+                my desired one page vision.
+            </p>
+            <ul>
+                <li>
+                    The greater Journal area will need a section tag, and so will the other page sections.
+                </li>
+                <li>
+                    There will be an internal anchor tag in the Projects section that will lead to the Journal section as a show of my work and thought processes.
+                </li>
+                <li>
+                    The class "entryFull" needs an article tag.
+                </li>
+            </ul>
+            <p>
+                I will likely be moving the Journal section after the Contact section. This should reduce the amount of scrolling needed to reach the
+                Contact section and allow more flexibility with the customization of the Journal section.
+            </p>
+            <ul>
+                <li>
+                    Use the header tag to hold navigation links for the Journal section that are currently held in the sidebar directory.
+                </li>
+            </ul>
+        </div>
+    </article>
+    <footer>
+        <p>© 2020 Martin Aduma</p>
+    </footer>
+</body>
+
+</html>
+
+
+<!-- 
+<div class="entryFull">
+    <div class="entryDate">
+        <h3> </h3>
+    </div>
+    <div class="entryContent">
+        <p>
+
+        </p>
+    </div>
+</div> 
+-->
